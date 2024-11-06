@@ -1,0 +1,13 @@
+<p>Nombre
+<input type="text" [(ngModel)]="nombre">
+<button (click)="addNombres()">Añadir</button>
+<button (click)="deleteName()">Borrar</button></p>
+
+<ul>
+    <li *ngFor="let n of l_nombres">
+        {{ n }}
+    </li>
+  </ul>
+  
+
+
