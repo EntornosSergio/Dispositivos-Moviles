@@ -1,0 +1,9 @@
+<div class="main">
+    <div class="pelis" *ngFor="let p of list">
+        <h1>{{p.titulo}} ({{p.year}})</h1>
+        <img src="{{p.image}}">
+        <h2>{{p.director}}</h2>
+        <h3>Puntuacion: {{p.puntuacion}}</h3>
+        
+    </div>
+</div>

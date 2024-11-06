@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8; /* Color de fondo suave */
+    color: #333; /* Color del texto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+.container {
+    flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #343a40;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #495057; /* Color de fondo en hover */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.logo {
+    width: 80px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción */
+    margin-right: 0; /* Espaciado entre el logo y el texto */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+
