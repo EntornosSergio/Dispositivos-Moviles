@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#cabecero {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.logo {
+    height: 110px;
+}
+
+.hiper {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 2px;
+    border-bottom: solid 2px black;
+}
