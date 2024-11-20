@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [MensajeComponent],
   imports: [
-    CommonModule,RouterModule
+  CommonModule,RouterModule
   ],
   exports:[
     MensajeComponent
