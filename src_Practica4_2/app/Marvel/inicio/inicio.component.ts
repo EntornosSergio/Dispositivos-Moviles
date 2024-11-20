@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IInicio } from './IInicio';
+import { IInicio } from '../Interfaces/IInicio';
+import { ServiciosService } from '../Servicios/servicios.service';
 @Component({
   selector: 'app-inicio',
   standalone: false,
@@ -8,42 +9,14 @@ import { IInicio } from './IInicio';
 })
 export class InicioComponent {
 
-  list:IInicio[]=[];
-  constructor(){
-    this.list=[
-      {
-        nombre: "Lobezno",
-        image: "imagenes/Lobezno-Wolverine.gif"
-      },
-      {
-        nombre: "DareVil",
-        image: "imagenes/darevil.gif"
-      },
-      {
-        nombre: "Venom",
-        image: "imagenes/venom.gif"
-      },
-      {
-        nombre: "Capitán América",
-        image: "imagenes/Capitan-America.jpg"
-      },
-      {
-        nombre: "Capitana Marvel",
-        image: "imagenes/capitana marvel.jpeg"
-      },
-      {
-        nombre: "DeadPool",
-        image: "imagenes/deadpool.jpg"
-      },
-      {
-        nombre: "Thor",
-        image: "imagenes/thor.png"
-        
-      },
-      {
-        nombre: "Black Panther",
-        image: "imagenes/blackpanter.jpg"
-      }
-    ]
+  lista:IInicio[]=[];
+
+  constructor(private servicioMensajes: ServiciosService) {}
+
+   ngOnInit(): void {
+    this.servicioMensajes.getMensajes().subscribe({
+      next: (inicio) => this.lista = inicio,
+      error: (error) => console.error('Error en cargar los mensajes', error)
+    });
   }
 }
