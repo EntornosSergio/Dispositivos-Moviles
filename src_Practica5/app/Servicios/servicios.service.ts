@@ -9,10 +9,15 @@ import { HttpClient } from '@angular/common/http';
 
 export class ServiciosService {
 
+  list: IMensaje[]=[];
+
   constructor(private http: HttpClient) {}
 
   getMensajes(): Observable<IMensaje[]> {
     return this.http.get<IMensaje[]>('/data/mensaje.json');
   }
   
+  getInfo(): IMensaje[] {
+    return this.list;
+    }
 }

@@ -1,13 +1,13 @@
-<div>
-    <div *ngFor="let p of list">
-        <div id="div1">
+
+    <div *ngFor="let p of list" id="div1">
+        
             <h1>ID: ({{p.id}})</h1>
             <ul>
-                <li>Nombre: {{p.name}}</li>
-                <li>Asunto: {{p.body}}</li>
+                <li>Nombre: {{p.nombre}}</li>
+                <li>Asunto: {{p.asunto}}</li>
+                <li><a routerLink="/detalles/{{p.id}}">Detalles</a></li>
             </ul>
             <br>
-        </div>
+        
         <br>
     </div>
-</div>

@@ -1,0 +1,13 @@
+<div *ngFor="let i of lista" id="contenedor">
+    <div *ngIf="i.id==id" id="contDos">
+        <div id="uno">
+            <u><h1>{{i.nombre}}</h1></u>
+        </div>
+        <div id="dos">
+            {{i.asunto}}
+            <br>
+            {{i.texto}}
+
+        </div>
+    </div>
+</div>
